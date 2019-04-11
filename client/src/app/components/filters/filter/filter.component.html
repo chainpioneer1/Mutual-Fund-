@@ -1,0 +1,9 @@
+<div fxFlex="100" fxLayout="row">
+    <ng-container [ngSwitch]="filter.kind">
+        <p-select *ngSwitchCase="filterType.SelectboxFilter"  [placeholder]="filter.name" [isMultiple]="filter.isMultiple" [options]="filter.options" [(selected)]="filter.selected" fxFlex="100" >  </p-select>
+        <p-autocomplete *ngSwitchCase="filterType.AutocompleteFilter" [placeholder]="filter.name" [isMultiple]="filter.isMultiple" [options]="filter.options" [(selected)]="filter.selected" fxFlex="100" >  </p-autocomplete>
+        <p-dropdown  *ngSwitchCase="filterType.DropdownFilter"  [placeholder]="filter.name" [isMultiple]="filter.isMultiple" [options]="filter.options" [(selected)]="filter.selected" fxFlex="100" >  </p-dropdown>
+        <p-special-autocomplete-filter *ngSwitchCase="filterType.SpecialFilter" [options]="filter.options" [(selected)]="filter.selected" fxFlex="100" >  </p-special-autocomplete-filter>
+        <p-quantity-filter *ngSwitchCase="filterType.QuantityFilter"  fxFlex="100"  [filter]="filter">  </p-quantity-filter>
+    </ng-container>
+</div>

@@ -1,0 +1,27 @@
+@mixin transition($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition: $value;
+  transition: $value;
+}
+
+@mixin fast-transition {
+  @include transition(all 0.2s ease);
+}
+
+@mixin short-transition {
+  @include transition(all 0.3s ease);
+}
+
+@mixin medium-transition {
+  @include transition(all 0.5s ease);
+}
+
+@mixin long-transition {
+  @include transition(all 1.2s ease);
+}
+
+@mixin no-transition {
+  @include transition(none);
+}

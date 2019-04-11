@@ -1,0 +1,48 @@
+#funds-filter {
+  max-height: 80vh;
+  padding-bottom: 10px;
+  border-bottom: none;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  .port-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  h2.title {
+    width: 100%;
+  }
+
+  .mat-slide-toggle .mat-slide-toggle-thumb {
+    background-color: #1e90ff !important;
+  }
+
+  .mat-slide-toggle .mat-slide-toggle-bar {
+    background-color: rgba(45, 83, 233, 0.54) !important;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  box-shadow: none;
+}
+.mat-card.scrollable-content{
+  max-height: 60vh;
+  overflow: scroll;
+  
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  box-shadow: none;
+}
+
+
+.card-box-shadow{
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12)
+  
+}

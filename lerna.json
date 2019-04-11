@@ -1,0 +1,11 @@
+{
+    "lerna": "2.9.0",
+    "packages": [
+      "client",
+      "data-server",
+      "shared",
+      "web-server",
+      "generators/ng"
+    ],
+    "version": "0.0.0"
+  }

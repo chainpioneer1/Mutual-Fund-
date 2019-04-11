@@ -1,0 +1,6 @@
+<div fxLayout="column">
+      <span *ngIf="placeholder">{{placeholder}}</span>
+      <div fxLayoutAlign="space-between stretch">
+            <mat-checkbox *ngFor="let option of options" [checked]="selectedDic[option.id]" (change)="_optionSelected($event.checked, option)">{{option.name}}</mat-checkbox>
+      </div>
+</div>

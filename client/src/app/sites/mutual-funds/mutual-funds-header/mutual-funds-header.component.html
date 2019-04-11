@@ -1,0 +1,19 @@
+<div class="header" fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
+    <div fxFlex="200px">
+        <div fxFlex="93px" class="logout" fxLayoutAlign="center">
+            <p-nav-menu [items]="navMenus"></p-nav-menu>
+        </div>
+        <button class="logout" mat-stroked-button>{{"header.logout" | translate}}</button>
+    </div>
+    <div fxFlex fxLayoutAlign="center center">
+        <span class="tab" (click)="tab='search'" [ngClass]="{'active':tab==='search'}">
+            <a mat-flat-button routerLink="search">{{"header.fund_search" | translate}}</a>
+        </span>
+        <span class="tab" (click)="tab='simulation'" [ngClass]="{'active':tab==='simulation'}">
+            <a mat-flat-button routerLink="simulation">{{"header.simulation"| translate}}</a>
+        </span>
+    </div>
+    <div fxFlex="200px">
+            <img class="praedicta-logo" src="assets/img/praedicta-logo.png" />
+    </div>
+</div>

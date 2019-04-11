@@ -1,0 +1,15 @@
+
+<div class="login-page" dir="rtl" >
+  <div class="login-main">
+      <div class="form">
+          <div class="login-logo">
+            <img src="assets/img/logo.png" />
+          </div>
+          <form class="login-form" autocomplete="off" [formGroup]="form.form" (ngSubmit)="login()">
+            <p-input [pFormControl]="form.form.controls['email']" pName='email'  [placeholder]='"login.email" | translate'></p-input>
+            <p-input [pFormControl]="form.form.controls['password']" pName='password'  [placeholder]='"login.password" | translate'>></p-input>
+            <button mat-raised-button color="primary">{{"login.login"|translate}}</button>
+          </form>
+        </div>
+  </div>
+</div>

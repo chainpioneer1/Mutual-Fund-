@@ -1,0 +1,29 @@
+<div fxLayout="column" id="filter_group">
+
+  <div fxFlex="42px" fxLayout="row" fxLayoutAlign="space-between center" class="pointer" (click)="groupClick()">
+    <div fxLayout="row">
+      <mat-checkbox [disabled]="group.wrap" [(ngModel)]="allCheck" [indeterminate]="isIndeterminate" (click)="onAllCheck($event)"
+                    (ngModelChange)="onAllCheckChange()"></mat-checkbox>
+      <span fxFlexOffset="10px">{{group.name}}</span>
+    </div>
+    <mat-icon *ngIf="!group.wrap" class="mat-icon-rtl-mirror">keyboard_arrow_right</mat-icon>
+    <mat-icon *ngIf="group.wrap">keyboard_arrow_down</mat-icon>
+  </div>
+  <div class="filtersContainer" fxFlex="100" fxLayout="column" fxLayoutAlign="space-between stretch">
+    <div *ngFor="let filter of group.filters">
+      <div fxLaytout="column" *ngIf="group.wrap || filter.selected">
+        <div fxLayout="row" *ngIf="!group.wrap" fxLayoutAlign="space-between center" class="sub--header">
+          <div fxLayout="row">
+            <mat-checkbox [(ngModel)]="filter.isActive" *ngIf="filter.selected && !group.wrap" (change)="updateGroupChecked()"></mat-checkbox>
+            <span fxFlexOffset="10px">{{filter.name}}</span>
+          </div>
+        </div>
+        <div fxLayout="row" style="margin-bottom: 10px;" *ngIf="group.wrap">
+          <div fxFlex="100" fxLayoutAlign="space-between stretch" fxFlex="100">
+            <p-filter fxFlex="100" fxLayout="row" [filter]="filter"></p-filter>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

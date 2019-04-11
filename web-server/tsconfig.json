@@ -1,0 +1,46 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "es2018",
+    "lib": [
+      "es2018",
+      "esnext.asynciterable"
+    ],
+    "types": [
+      "reflect-metadata"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "shared/*": [
+        "../shared/*"
+      ]
+    }
+  }
+}
+  // {
+  //   "compilerOptions": {
+  //     "target": "es2018",
+  //     "lib": [
+  //       "es2018",
+  //       "esnext.asynciterable"
+  //     ],
+  //     "types": [
+  //       "reflect-metadata"
+  //     ],
+  //     "module": "commonjs",
+  //     "moduleResolution": "node",
+  //     "experimentalDecorators": true,
+  //     "emitDecoratorMetadata": true,
+  //     "sourceMap": true,
+  //     "declaration": false,
+  //     "baseUrl": ".",
+  //     "paths": {
+  //       "shared/*": [
+  //         "../shared/*"
+  //       ]
+  //     }
+  //   },
+  //   "exclude": [
+  //     "node_modules"
+  //   ]
+  // }

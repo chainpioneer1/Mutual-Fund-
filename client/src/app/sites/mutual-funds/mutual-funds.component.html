@@ -1,0 +1,7 @@
+<div [dir]="dir">
+      <p-mutual-funds-header></p-mutual-funds-header>
+    <div class="main-panel">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<button class="dirbutton"  mat-button (click)="dir = dir == 'rtl' ? 'ltr' : 'rtl'">change dir</button>

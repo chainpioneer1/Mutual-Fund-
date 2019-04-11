@@ -1,0 +1,4 @@
+<div fxLayout="column">
+    <p-autocomplete [options]="options" [(selected)]="_selected" (selectedChange)="onSelect($event)" [isMultiple]='true' fxFlex="100"></p-autocomplete>
+    <p-filter fxFlex="100" fxLayout="row" *ngIf="filter" [filter]="filter"></p-filter>
+</div>

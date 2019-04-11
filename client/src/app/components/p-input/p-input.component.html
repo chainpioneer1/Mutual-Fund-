@@ -1,0 +1,8 @@
+<form [formGroup]="pFormControl.parent">
+  <mat-form-field [appearance]="appearance">
+    <input matInput [placeholder]="placeholder" [formControl]="pFormControl" [name]="pName" [formControlName]="pName"
+      [errorStateMatcher]="matcher">
+    <mat-hint *ngIf='hint'>{{hint}}</mat-hint>
+    <mat-error *ngIf="pFormControl.invalid"> {{"validations." + matcher.error | translate}} </mat-error>
+  </mat-form-field>
+</form>

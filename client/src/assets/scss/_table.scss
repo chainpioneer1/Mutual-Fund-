@@ -1,0 +1,48 @@
+.table{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Arial;
+    border-radius: 8px;
+    border-collapse: collapse;
+}
+table, tr {
+    border: 1px solid #b7c9cf;
+}
+thead{
+    font-size: 18px;
+    background-color: #167f92;
+    color: white;
+}
+.inner_table{
+    overflow-y: scroll;
+    width: 100%;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+tr{
+    font-weight: bold;
+    color: #999999;
+    cursor: pointer;
+}
+tr:hover{
+    opacity: 0.8;
+    color: #174d5a;
+}
+th, td{
+    text-align: start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 0;
+}
+td{
+    padding: 3px 5px !important;
+    height: 50px;
+}
+.odd{ background-color: #ebf2f3; }
+.even{ background-color: #FFFFFF; }

@@ -1,0 +1,100 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$primary: (
+  50 : #e2e9ec,
+  100 : #b8c9cf,
+  200 : #88a5af,
+  300 : #58818f,
+  400 : #356677,
+  500 : #114b5f,
+  600 : #0f4457,
+  700 : #0c3b4d,
+  800 : #0a3343,
+  900 : #052332,
+  A100 : #6bc6ff,
+  A200 : #38b3ff,
+  A400 : #059fff,
+  A700 : #0090eb,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #cccccc,
+    400 : #cccccc,
+    500 : #cccccc,
+    600 : #cccccc,
+    700 : #cccccc,
+    800 : #cccccc,
+    900 : #cccccc,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #cccccc,
+    A700 : #cccccc,
+  )
+);
+$secondary: (
+  50 : #edf2e7,
+  100 : #d1dfc3,
+  200 : #b3ca9b,
+  300 : #95b472,
+  400 : #7ea454,
+  500 : #679436,
+  600 : #5f8c30,
+  700 : #548129,
+  800 : #4a7722,
+  900 : #396516,
+  A100 : #c5ff9e,
+  A200 : #a7ff6b,
+  A400 : #89ff38,
+  A700 : #7aff1f,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #cccccc,
+    600 : #cccccc,
+    700 : #cccccc,
+    800 : #cccccc,
+    900 : #cccccc,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+/* Edit These Variables To Change Colors!! */
+$core-primary-palette: mat-palette($primary, 500);
+$core-accent-palette:  mat-palette($secondary, 500);
+$core-warn-palette: mat-palette($mat-red);
+$core-sidenav-primary-palette: mat-palette($primary, 500);
+$core-sidenav-accent-palette:  mat-palette($secondary, 500);
+$core-sidenav-font-color: map_get($core-sidenav-accent-palette, default);
+/* Don't Edit Anything Below This Line!!!! */
+// mandatory stuff for theming
+$core-main-theme: mat-light-theme($core-primary-palette, $core-accent-palette, $core-warn-palette);
+$core-sidenav-theme: mat-light-theme($core-sidenav-primary-palette, $core-sidenav-accent-palette, $core-warn-palette);
+// include the custom theme object into the angular material theme
+@include angular-material-theme($core-main-theme);
+@include mat-toolbar-theme($core-sidenav-theme);
+// set scss variables from color palettes
+$primary-color: map_get($core-primary-palette, default);
+$secondary-color: map_get($core-accent-palette, default);
+$sidenav-primary-color: map_get(map_get($core-sidenav-theme, primary), default);
+$sidenav-secondary-color: $core-sidenav-font-color;
+$border-radius: 2px;
+$enable-shadows: true;
+$roboto-font-path: "../node_modules/materialize-css/fonts/roboto/" !default;
+$font-color: rgba(0, 0, 0, .7);
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;

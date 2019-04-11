@@ -1,0 +1,16 @@
+@import './_mixins.scss';
+.btn {
+  border-radius: $border-radius;
+  @include box-shadow(0 2px 5px 0 rgba(0,0,0,.26));
+  font-family: $font-family-sans-serif;
+  @include transition(all .2s linear);
+  .no-min {
+    min-width: 0;
+  }
+  &:hover:not(:disabled) {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .26);
+  }
+  &:active {
+    box-shadow: none;
+  }
+}

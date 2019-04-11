@@ -1,0 +1,78 @@
+{
+  "name": "swagger-angular-generator",
+  "version": "2.0.6",
+  "description": "Generator of API layer in TypeScript for Angular 5 apps",
+  "main": "dist/generate.js",
+  "types": "dist/generate.d.ts",
+  "bin": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "demo:install": "cd demo-app/client && npm i",
+    "start": "ts-node src/index.ts",
+    "start:debug": "node -r ts-node/register --inspect-brk src/index.ts",
+    "prebuild": "rm -rf dist",
+    "build": "tsc --outDir dist",
+    "postbuild": "npm run generate",
+    "preversion": "npm run build",
+    "postversion": "git status",
+    "generate": "cd demo-app/client && npm run generate",
+    "lint": "tslint -p tsconfig.json",
+    "lint:fix": "tslint -p tsconfig.json --fix",
+    "test": "cd demo-app/client && npm run test:ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jnwltr/swagger-angular-generator.git"
+  },
+  "keywords": [
+    "swagger",
+    "api",
+    "client",
+    "typescript",
+    "generate",
+    "generator",
+    "angular"
+  ],
+  "author": "Jan Walter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jnwltr/swagger-angular-generator/issues"
+  },
+  "homepage": "https://github.com/jnwltr/swagger-angular-generator#readme",
+  "dependencies": {
+    "@types/rimraf": "^2.0.2",
+    "commander": "^2.15.1",
+    "lodash": "^4.17.10",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "@angular/common": "^5.2.11",
+    "@angular/core": "^5.2.11",
+    "@angular/forms": "^5.2.11",
+    "@angular/http": "^5.2.11",
+    "@angular/platform-browser": "^5.2.11",
+    "@ngrx/effects": "^5.2.0",
+    "@ngrx/store": "^5.2.0",
+    "@types/commander": "^2.12.2",
+    "@types/lodash": "^4.14.110",
+    "@types/node": "^9.6.22",
+    "rxjs": "^5.5.11",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.10.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "~2.6.2",
+    "zone.js": "^0.8.26"
+  },
+  "peerDependencies": {
+    "@angular/common": "^5.2.4",
+    "@angular/core": "^5.2.4",
+    "@angular/http": "^5.2.4",
+    "@angular/platform-browser": "^5.2.4",
+    "@ngrx/effects": "^5.1.0",
+    "@ngrx/store": "^5.1.0",
+    "rxjs": "^5.5.0",
+    "zone.js": "^0.8.18"
+  }
+}

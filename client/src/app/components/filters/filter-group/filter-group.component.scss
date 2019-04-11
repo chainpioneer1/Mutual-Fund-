@@ -1,0 +1,23 @@
+#filter_group{
+    .mat-expansion-panel{
+      width: 100%;
+      box-shadow: none!important;
+
+      .mat-expansion-panel-header-title{
+        position: absolute;
+      }
+    }
+
+    .sub--header{
+      margin-bottom: 15px;
+     
+    }
+    .pointer{
+      cursor: pointer;
+    }
+
+    .filtersContainer{
+      padding: 11px 30px 11px 30px;
+    }
+  }
+

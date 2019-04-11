@@ -1,0 +1,23 @@
+{
+    "validations": {
+        "required":"שדה חובה",
+        "email":"אמייל לא תקין",
+        "minlength":"מספר תווים לא תקין"
+    },
+    "login":{
+        "email":"שם משתמש",
+        "password":"סיסמה",
+        "login":"כניסה"
+    },
+    "header":{
+        "fund_search": "למצוא קרן",
+        "simulation": "סימולציה בנקאית",
+        "logout":"יציאה"
+    },
+    "search":{
+        "portfolio": "תיק",
+        "open_previous_search": "חיפוש קוד פתוח",
+        "portfolio_title": "כותרת תיק",
+        "advanced_view":"תצוגה מתקדמת"
+    }
+}

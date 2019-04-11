@@ -1,0 +1,20 @@
+<div class="card-box-shadow">
+    <mat-card id="funds-filter">
+        <mat-card-content fxLayout="column">
+            <div fxFlex="100" fxLayout="column" fxLayoutAlign="center center">
+                <h2>{{'search.portfolio' | translate}}</h2>
+                <form class="port-form">
+                    <p-autocomplete *ngIf="selected" [isMultiple]="false" [filter]="filter" [selected]="selected" fxFlex="100"></p-autocomplete>
+                </form>
+                <mat-slide-toggle color="#1e90ff">{{'search.advanced_view'|translate}}</mat-slide-toggle>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="scrollable-content">
+        <mat-card-content fxLayut="column">
+            <div fxFlex="100" fxLayout="column" fxLayoutAlign="start stretch" class="filter-group">
+                <p-group *ngFor="let group of groups" [group]="group"></p-group>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,121 @@
+.text_color_primary{
+    font-family: "Arial";
+    color: black;
+    font-weight: bold;
+}
+
+.text_color_secondary{
+    font-family: "Arial";
+    color: #A1A1A1;
+    font-weight: bold;
+}
+
+.text_color_data{
+    color: #4EE0E3;
+    font-family: "Arial";
+}
+
+.background_color_data{
+    background-color: #4EE0E3;
+    color: white;
+}
+
+.circle-button{
+    border-radius: 100%;
+    border: none;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.pipe{
+    font-size: 24px;
+    padding: 3px 0;
+    margin: 0 14px;
+    border-right: 1px solid #8CA0B3;
+}
+
+.e-card{
+    box-shadow: -3px 2px 2px 0 rgba(119,151,178,0.16);
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding: 8px;
+    margin: 8px;
+    box-sizing: content-box;
+}
+
+.background_color_primary{
+    background-color: #F7F7F7;
+}
+
+.e-section{
+    background-color: #5A5A5A;
+    color: #CCCCCC;
+    font-size: 26px;
+    line-height: 31px;
+    font-weight: bold;
+    text-align: start;
+    font-family: "Arial";
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.sub_title{
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+
+.e-textArea{
+    width: 96%;
+    margin: 1% 2%;
+    border: 1px solid #888;
+    border-radius: 8px;
+    outline: none;
+    resize: none;
+}
+
+.icon_btn{
+    height: 24px;
+    width: 24px;
+    padding: 8px;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 100%;
+    color: white;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+
+.regular_btn{
+    border: none;
+    border-radius: 100px;
+    background-color: #F0F3F8;
+    width: 72.37px;
+    padding: 4px 20px;
+    cursor: pointer;
+}
+
+
+
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,44 @@
+{
+    "name": "p-proj",
+    "version": "1.0.0",
+    "description": "p-proj",
+    "devDependencies": {
+        "@types/isomorphic-fetch": "0.0.34",
+        "@types/node": "^10.7.0",
+        "lerna": "^2.11.0",
+        "ng-swagger-gen": "^1.4.3",
+        "openapi-client": "^1.0.3",
+        "swagger-angular-generator": "^2.2.1",
+        "tsconfig-paths": "^3.4.2",
+        "tslint": "^5.10.0",
+        "typescript": "^2.8.3"
+    },
+    "scripts": {
+        "start": "echo \"Nothing to do\" && exit 1",
+        "web-server": "node -r ts-node/register/transpile-only",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "install": "lerna bootstrap",
+        "codegen": "ts-node ./generators/app.ts",
+        "gen": "ng-swagger-gen -i ./swagger/web-server/swagger-auth.json -o ./client/src/api",
+        "generate": "swagger-angular-generator -s ./swagger/web-server/swagger-auth.json -d ./client/src/app/api",
+        "build-client": "cd ./client && npm run build",
+        "start:idea": "ts-node %NODE_DEBUG_OPTION% --ignore false web-server/app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@types/lodash": "^4.14.116",
+        "bluebird": "^3.5.1",
+        "class-validator": "^0.9.1",
+        "config": "^3.0.1",
+        "lodash": "^4.17.10",
+        "mongodb": "^3.1.10",
+        "node-cmd": "^3.0.0",
+        "reflect-metadata": "^0.1.12",
+        "ts-node": "^7.0.1"
+    }
+}
